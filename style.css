@@ -1,0 +1,77 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #121214;
+  --base-color: 194;
+  --primary-color:  hsl(var(--base-color194, 100%, 63%));
+  --bg-primary-light: hsla(var(--base-color194, 100%, 63%, 0.13));
+
+  --text-color: #FFF;
+
+    font-size: 62.5%;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  display: grid;
+  min-height: 100vh;
+}
+
+main{
+  justify-self: center;
+  align-self: flex-end
+}
+
+footer{
+  justify-self: flex-end;
+  align-self: flex-end;
+  padding: 3.2rem 4rem;
+}
+
+button{
+  background-color: transparent;
+  border: none;
+
+}
+
+button svg{
+  width: clamp(3.2rem, 2rem + 12vw, 6.3rem );
+}
+
+.timer{
+  font-size: 8.8rem;
+  display: flex;
+  font-size: clamp(4rem, 4rem + 10vw, 8.8rem );
+  margin-bottom: 1.6rem;
+  justify-content: center;
+}
+
+
+.controls{
+background-color: hsla(var(--base-color), 100%, 63%, 0.13);
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 9999px;
+width: clamp(10rem, 10rem + 30vw, 22.8rem);
+height: clamp(8rem, 5rem + 20vw, 10.8rem);
+gap: 3.2rem;
+padding: 2.2rem 4rem;
+}
+
+.play svg path, 
+.pause svg path, 
+.sound-on svg path{
+  background-color: var(--primary-color);
+}
+
+
+.hide{
+  display: none;
+}
